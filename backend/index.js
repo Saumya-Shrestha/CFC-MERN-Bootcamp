@@ -1,23 +1,19 @@
 import express from "express";
+import dotenv from "dotenv";
+import tweetRoute from "./routes/tweetRoute.js";
 
-const port = 3000;
+dotenv.config();
+
+const port = process.env.PORT || 3000;
 const app = express();
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/", (req, res) => {
-  res.send("Got a POST request");
-});
-
-app.put("/user", (req, res) => {
-  res.send("Got a PUT request at /user");
-});
-
-app.delete("/user", (req, res) => {
-  res.send("Got a DELETE request at /user");
-});
+app.use("/tweets", tweetRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
