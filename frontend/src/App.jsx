@@ -1,3 +1,4 @@
+import { Greeting } from "./components/Greetings.jsx";
 import TestClass from "./components/TestClass.jsx";
 
 function TestComponent() {
@@ -15,6 +16,7 @@ function App() {
       <h2>Hello everyone</h2>
       <TestComponent />
       <TestClass />
+      <Greeting name="Saumya Man Shrestha" />
     </div>
   );
 }
