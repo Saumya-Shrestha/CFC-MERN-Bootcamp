@@ -2,6 +2,7 @@ import { Greeting } from "./components/Greetings.jsx";
 import MovieCard from "./components/MovieCard.jsx";
 import TestClass from "./components/TestClass.jsx";
 import User from "./components/User.jsx";
+import Counter from "./components/Counter.jsx";
 import "./App.css";
 
 function TestComponent() {
@@ -21,8 +22,9 @@ function App() {
       <TestClass />
       <Greeting name="Saumya Man Shrestha" />
       <MovieCard name="Inception" description="A movie about dreams" />
-      <MovieCard name="Interstellar" description="A movie about space" /> */}
-      <User />
+      <MovieCard name="Interstellar" description="A movie about space" />
+      <User /> */}
+      <Counter />
     </div>
   );
 }
